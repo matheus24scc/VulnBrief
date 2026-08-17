@@ -1,0 +1,33 @@
+{
+  "vulnerabilities": {
+    "lodash": {
+      "name": "lodash",
+      "severity": "high",
+      "title": "Prototype Pollution",
+      "fixAvailable": {
+        "name": "lodash",
+        "version": "4.17.21"
+      }
+    },
+    "minimist": {
+      "name": "minimist",
+      "severity": "critical",
+      "title": "Prototype Pollution",
+      "fixAvailable": true
+    },
+    "semver": {
+      "name": "semver",
+      "severity": "low",
+      "title": "ReDoS",
+      "fixAvailable": false
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "critical": 1,
+      "high": 1,
+      "moderate": 0,
+      "low": 1
+    }
+  }
+}
