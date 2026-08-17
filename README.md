@@ -73,6 +73,13 @@ print(render(data))
 - `vulnbrief/brief.py` — gera Markdown com resumo, passos por severidade e checklist.
 - `vulnbrief/cli.py` — interface de linha de comando (argparse).
 
+
+## Demo
+
+![VulnBrief em acao](assets/vulnbrief-demo/vulnbrief-demo.png)
+
+> GIF animado: [vulnbrief-demo.gif](assets/vulnbrief-demo/vulnbrief-demo.gif) — execucao real do CLI.
+
 ## Testes
 
 ```bash

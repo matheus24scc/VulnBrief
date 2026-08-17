@@ -1,0 +1,19 @@
+# VulnBrief
+$ vulnbrief sample_audit.json
+# VulnBrief — Briefing de Seguranca (linguagem simples)
+
+**Resumo:** 1 critica(s), 1 alta(s), 0 media(s), 1 baixa(s).
+
+## O que fazer (por ordem de severidade)
+1. **[critica]** `minimist` — Prototype Pollution
+   - Correcao: `npm audit fix`
+2. **[alta]** `lodash` — Prototype Pollution
+   - Correcao: `npm install lodash@4.17.21`
+3. **[baixa]** `semver` — ReDoS
+   - Correcao: `sem correcao automatica disponivel`
+
+## Checklist de remediacao
+
+- [ ] `minimist` (critica) -> npm audit fix
+- [ ] `lodash` (alta) -> npm install lodash@4.17.21
+- [ ] `semver` (baixa) -> sem correcao automatica disponivel
