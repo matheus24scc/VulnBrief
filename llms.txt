@@ -8,7 +8,7 @@ of the project for large language models and AI agents.
 ## About
 
 - Repository: https://github.com/matheus24scc/VulnBrief
-- Primary stack: Unknown — fill in the primary language/stack
+- Primary stack: Python 3.11+ (setuptools; CLI `vulnbrief`)
 - License: MIT
 
 ## Key documents
