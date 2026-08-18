@@ -97,3 +97,12 @@ Oracle verde: contagem por severidade, ordenação, comandos de correção e pre
 ## Licença
 
 MIT — veja [LICENSE](LICENSE).
+
+## Status (checkup 2026-08-18)
+> Revisado na campanha de repo-checkup. Relatorio completo: `~/repo-checkup/reports/VulnBrief.md` (local do mantenedor, nao no repo).
+- **Build/Install**: PASS — `pip install -e .` RC=0 (wheel editável `vulnbrief-0.1.0`); também `pip install -e ".[dev]"` (`dev` adicionado no checkup).
+- **Smoke test**: PASS — `python -m pytest -q` 4 passed; `python scripts/smoke.py` PASS (parse de findings, ordem por severidade, comando de fix, briefing).
+- **Para rodar de ponta-a-ponta precisa de**: nenhum serviço externo (CLI Python puro; `pip-audit` opcional).
+- **Inconsistencias conhecidas (README vs codigo)**: nenhuma (relatório não cita README vs código; `AGENTS.md`/`llms.txt` tinham placeholders "Unknown stack" corrigidos no checkup).
+- **Seguranca**: sem vulns altas remediadas automaticamente (`pip-audit`: nenhuma vulnerabilidade conhecida; secret scan: nenhum segredo).
+- **Estado resumido**: build verde + smoke; CLI Python puro; sem serviços externos; sem vulnerabilidades.
