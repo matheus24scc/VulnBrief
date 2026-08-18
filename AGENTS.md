@@ -7,16 +7,24 @@ Codex, etc.) working with this repository. Read it before writing or changing an
 
 VulnBrief — Turn security-scan output (npm audit / SBOM / CVEs) into a plain-language briefing + remediation checklist for non-expert devs.
 
-- **Primary language / stack:** Unknown — fill in the primary language/stack
+- **Primary language / stack:** Python 3.11+ (setuptools build; CLI entry point `vulnbrief` via `vulnbrief.cli:main`)
 - **Default branch:** `main`
 - **Repository:** https://github.com/matheus24scc/VulnBrief
 
 ## Commands
 
-See the project manifest for setup. (No recognized package manager was detected — fill in the real install/build/run commands here.)
+This is a pure-Python project (no Node/Go/Docker). Setup and quality gates:
 
-> If a command above is missing or wrong, check the project manifest (e.g. `package.json` scripts,
-> `Makefile`, `pyproject.toml`) and update this file — keeping AGENTS.md accurate is part of the work.
+```bash
+python3 -m venv .venv && . .venv/bin/activate
+pip install -e ".[dev]"          # installs the package + pytest (dev extra)
+pytest -q                        # oracle tests (tests/test_vulnbrief.py)
+python scripts/smoke.py          # end-to-end smoke test (real CLI run)
+vulnbrief audit.json             # run the CLI on an `npm audit --json` output
+```
+
+> If a command above is missing or wrong, check the project manifest (`pyproject.toml`) and update this
+> file — keeping AGENTS.md accurate is part of the work.
 
 ## Architecture & Conventions
 
